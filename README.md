@@ -1,53 +1,26 @@
-# CIFAR-10 Robustness Experiments <- to fix 
+# Customer Behavior Clustering for Marketing Insights 
 
-This repository contains a deep learning mini-project that explores how different types of data and label corruptions affect image classification performance on the CIFAR-10 dataset.
-
-Implemented using **PyTorch**, and designed for **Colab** execution.
+This repository contains a machine learning project that applies clustering techniques to extract marketing insights from user behavioral data. 
 
 ---
 
-## Project Overview
+poster.pdf: One-page project summary (poster presentation format)
 
-We evaluate two CNN architectures:
+main.py: Core script for processing user log data and generating clustering results 
 
-- `SimpleCNN`: A 2-layer baseline convolutional model
-- `DeeperCNN`: A 4-layer model with BatchNorm and Dropout
+data.py: Feature engineering module that transforms order/review logs into feature sets
 
-Each model is tested under the following conditions:
+masterorder.py: Data pipeline for preprocessing server-side raw logs
 
-1. Baseline (clean CIFAR-10)
-2. Random Label Shuffle
-3. Label Noise (20% corrupted labels)
-4. Input Perturbation: Random Crop
-5. Input Perturbation: Gaussian Blur
+utility.py: Supporting helper functions used throughout the pipeline 
 
-Results are evaluated using global accuracy, class-wise metrics, and confusion matrices.
+--- 
 
----
-
-## How to Run
-
-This project is designed to run in a single pass in Google Colab.
-
-1. Upload `CIFAR10_experimentation_project.ipynb` to Colab
-2. Run all cells sequentially
-3. Each experiment's results (accuracy + confusion matrix) will be printed
-
----
-
-## Dependencies
-
-See [`requirements.txt`](./requirements.txt) for all necessary packages.
-
----
-
-## Author
-
-- Created by **SeongYeon Moon** for an AI course mini-project
-- 장병탁, 인공지능, Seoul National University, Spring 2025
+- Created by **SeongYeon Moon** for an AI course final-project 
+- 장병탁, 인공지능, Seoul National University, Spring 2025 
 
 ---
 
 ## License
 
-This project is for academic purposes only. All code is open for educational use.
+This project is for academic and educational use only. 
